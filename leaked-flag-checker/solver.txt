@@ -1,0 +1,7 @@
+binary ninjaでchallengeを読み込むと、
+Fkwfdf|krdl~z"
+怪しい文字列
+
+7とのxorで復元できるので、
+"".join([chr(ord(c) ^ 7) for c in "Fkwfdf|krdl~z"])
+でflagで取れる。
